@@ -7,7 +7,7 @@
 pip install catconfig
 ```
 
-If you want to use validation feature, install `cerberus` module for use it normally.  
+If you want to use validation feature, install `cerberus` module for your project to use it normally.  
 
 Install `toml` or `pyyaml` module for toml/yaml format parsing.
 
