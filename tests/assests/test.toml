@@ -1,0 +1,8 @@
+foo = 'bar'
+
+[[arr]]
+val = 1
+[[arr]]
+val = 2
+[[arr]]
+val = 3

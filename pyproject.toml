@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "catconfig"
+version = "0.1.0"
+description = "🐱Make more easy for reading/validating/updating config for python app"
+authors = ["dev-techmoe <me@lolicookie.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/dev-techmoe/python-catconfig"
+repository = "https://github.com/dev-techmoe/python-catconfig"
+keywords = ["config", "catconfig", "configure", "setting"]
+include = [ "LICENSE" ]
+classifiers = [
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries"
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.6.0"
+pytest = "^6.1.1"
+autopep8 = "^1.5.4"
+toml = "^0.10.1"
+pyyaml = "^5.3.1"
+cerberus = "^1.3.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
