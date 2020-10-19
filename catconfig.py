@@ -29,11 +29,11 @@ class ValidationError(Exception):
         for (key, errors) in payload.items():
             for err in errors:
                 if isinstance(err, dict):
-                    previous_text += f'{make_indent}{key}:\n'
+                    previous_text += '{}{}:\n'.format(make_indent, key)
                     previous_text += self.generate_err_msg(err, indent+1)
                     pass
                 else:
-                    previous_text += f'{make_indent}{key}: {err}\n'
+                    previous_text += '{}{}: {}\n'.format(make_indent, key, err)
                     pass
 
         return previous_text
