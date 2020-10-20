@@ -1,4 +1,8 @@
 # CatConfig
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/catconfig) 
+![PyPI - License](https://img.shields.io/pypi/l/catconfig)
+![test](https://github.com/dev-techmoe/python-catconfig/workflows/test/badge.svg)
+
 🐱Make more easy for reading/validating/updating config for python app
 
 ## Install 
