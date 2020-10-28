@@ -48,7 +48,11 @@ print(c.foo)
 # Print: bar
 print(bool(c.some.value.does.nt.exists))
 # Print: False
+print(str(c.some.value.does.nt.exists))
+# Print: None
 print(c['foo'])
+# Print: bar
+print(c.get('foo'))
 # Print: bar
 
 # Validation
