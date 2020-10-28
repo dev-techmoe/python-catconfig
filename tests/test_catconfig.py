@@ -47,7 +47,7 @@ def test_load_file(type, path):
     c = CatConfig()
     c.load_from_file(path, format=type)
     assert c.foo == 'bar'
-
+    
 
 def test_update():
     c = CatConfig(data={
@@ -69,6 +69,9 @@ def test_update():
     assert c.boolitem == True
     assert bool(c.obj) == True
     assert bool(c.some.item.does.nt.exist) == False
+
+    assert c.get('test') == 'val'
+    assert c.get('some_key_does_not_exists') == None
 
 
 def test_validate():

@@ -142,7 +142,14 @@ class CatConfig:
         """
         return self.update({key: value})
 
-    def __getitem__(self, key: str) -> Any:
+    def get(self, key: str=None) -> Any:
+        """
+        Get item by key
+        It will return self contained object if param `key` == None
+        :param key: key
+        """
+        if key == None:
+            return self._data
         if key in self._data:
             data = self._data.get(key)
             if isinstance(data, dict):
@@ -152,6 +159,9 @@ class CatConfig:
             else:
                 return data
         return CatConfig()
+    
+    def __getitem__(self, key: str) -> Any:
+        return self.get(key)
 
     def __bool__(self):
         """
