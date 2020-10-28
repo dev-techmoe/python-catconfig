@@ -107,6 +107,13 @@ def test_validate():
     with pytest.raises(ValidationError):
         c.load(data)
 
+def test_magic_method():
+    c = CatConfig(data={'test': 'val'})
+
+    assert str(c) == "{'test': 'val'}"
+
+    c = CatConfig()
+    assert str(c) == 'None'
 
 def test_generate_config():
     err = ValidationError({

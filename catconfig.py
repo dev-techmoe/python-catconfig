@@ -180,3 +180,8 @@ class CatConfig:
             if len(self._data.keys()) == 0:
                 return True
         return self._data == b
+
+    def __str__(self):
+        if self._data == {}:
+            return 'None'
+        return str(self._data)
