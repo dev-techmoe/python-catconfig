@@ -47,6 +47,13 @@ def test_load_file(type, path):
     c = CatConfig()
     c.load_from_file(path, format=type)
     assert c.foo == 'bar'
+
+    
+    c = CatConfig(data={
+        'previous_key': 'val'
+    })
+    c.load_from_file(path, format=type)
+    assert c.previous_key == 'val'
     
 
 def test_update():
